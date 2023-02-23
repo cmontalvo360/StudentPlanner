@@ -9,18 +9,26 @@ import java.time.LocalDate;
 public class Course {
     @PrimaryKey(autoGenerate = true)
     private int courseID;
-    private String courseTitle;
+    private String title;
     private String startDate;
     private String endDate;
     private String status;
+    private String instructorsName;
+    private String instructorsPhone;
+    private String instructorsEmail;
+    private String note;
     private int termID;
 
-    public Course(int courseID, String courseTitle, String startDate, String endDate, String status, int termID) {
+    public Course(int courseID, String title, String startDate, String endDate, String status, String instructorsName, String instructorsPhone, String instructorsEmail, String note, int termID) {
         this.courseID = courseID;
-        this.courseTitle = courseTitle;
+        this.title = title;
         this.startDate = startDate;
         this.endDate = endDate;
         this.status = status;
+        this.instructorsName = instructorsName;
+        this.instructorsPhone = instructorsPhone;
+        this.instructorsEmail = instructorsEmail;
+        this.note = note;
         this.termID = termID;
     }
 
@@ -32,12 +40,12 @@ public class Course {
         this.courseID = courseID;
     }
 
-    public String getCourseTitle() {
-        return courseTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setCourseTitle(String courseTitle) {
-        this.courseTitle = courseTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getStartDate() {
@@ -70,5 +78,37 @@ public class Course {
 
     public void setTermID(int termID) {
         this.termID = termID;
+    }
+
+    public String getInstructorsName() {
+        return instructorsName;
+    }
+
+    public void setInstructorsName(String instructorsName) {
+        this.instructorsName = instructorsName;
+    }
+
+    public String getInstructorsPhone() {
+        return instructorsPhone;
+    }
+
+    public void setInstructorsPhone(String instructorsPhone) {
+        this.instructorsPhone = instructorsPhone;
+    }
+
+    public String getInstructorsEmail() {
+        return instructorsEmail;
+    }
+
+    public void setInstructorsEmail(String instructorsEmail) {
+        this.instructorsEmail = instructorsEmail;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 }

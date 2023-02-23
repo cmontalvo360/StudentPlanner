@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <TextView
-        android:id="@+id/textViewCourseTitle"
+        android:id="@+id/textViewTitle"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -15,21 +15,21 @@
         tools:layout_editor_absoluteX="169dp"
         tools:layout_editor_absoluteY="228dp" />
     <TextView
-        android:id="@+id/textViewCourseStart"
+        android:id="@+id/textViewType"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/textViewCourseTitle"
+        app:layout_constraintLeft_toRightOf="@+id/textViewTitle"
         tools:layout_editor_absoluteX="169dp"
         tools:layout_editor_absoluteY="228dp" />
     <TextView
-        android:id="@+id/textViewCourseInstructor"
+        android:id="@+id/textViewStart"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/textViewCourseStart"
+        app:layout_constraintLeft_toRightOf="@+id/textViewType"
         tools:layout_editor_absoluteX="169dp"
         tools:layout_editor_absoluteY="228dp" />
 

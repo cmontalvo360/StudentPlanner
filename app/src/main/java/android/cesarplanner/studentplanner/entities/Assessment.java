@@ -11,15 +11,15 @@ public class Assessment {
     @PrimaryKey(autoGenerate = true)
     private int assessmentID;
     private String title;
-    private String description;
+    private String type;
     private String startDate;
     private String endDate;
     private int courseID;
 
-    public Assessment(int assessmentID, String title, String description, String startDate, String endDate, int courseID) {
+    public Assessment(int assessmentID, String title, String type, String startDate, String endDate, int courseID) {
         this.assessmentID = assessmentID;
         this.title = title;
-        this.description = description;
+        this.type = type;
         this.startDate = startDate;
         this.endDate = endDate;
         this.courseID = courseID;
@@ -41,12 +41,12 @@ public class Assessment {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getType() {
+        return type;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getStartDate() {

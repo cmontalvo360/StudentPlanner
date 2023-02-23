@@ -12,7 +12,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {Assessment.class, Course.class, Term.class}, version=1, exportSchema = false)
+@Database(entities = {Assessment.class, Course.class, Term.class}, version=3, exportSchema = false)
 public abstract class StudentPlannerDbBuilder extends RoomDatabase {
     public abstract AssessmentDAO assessmentDAO();
     public abstract CourseDAO courseDAO();
@@ -25,6 +25,7 @@ public abstract class StudentPlannerDbBuilder extends RoomDatabase {
             synchronized (StudentPlannerDbBuilder.class) {
                 if(INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), StudentPlannerDbBuilder.class, "SPDatabase.db")
+                            .fallbackToDestructiveMigration()
                             .build();
                 }
             }
